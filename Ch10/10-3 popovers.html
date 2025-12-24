@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Bootstrap網頁</title>
+  </head>
+  <body> 
+    <div class="container text-center">
+	  <img src="flowers3.jpg" width="50%" class="img-fluid"><br>
+      <button type="button" class="btn btn-secondary" data-bs-container="body" 
+        data-bs-toggle="popover" data-bs-placement="top" data-bs-content="太陽花">
+        在上方顯示彈出提示</button>
+      <button type="button" class="btn btn-secondary" title="圖片標題"
+        data-bs-toggle="popover" data-bs-placement="right" data-bs-content="太陽花">
+        在右側顯示彈出提示</button>
+
+      <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl)
+        });
+      </script>
+  </body>
+</html>
